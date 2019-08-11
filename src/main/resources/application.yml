@@ -1,0 +1,21 @@
+#数据源
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://47.106.149.46:3306/aop?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+  thymeleaf:
+    prefix: classpath:/templates/
+    check-template-location: true
+    suffix: .html
+    encoding: UTF-8
+    mode: LEGACYHTML5
+    cache: true
+ #配置mybatis
+mybatis:
+   mapper-locations: classpath*:mappers/*.xml
+   type-aliases-package: com.zking.demo.model
+   configuration:
+     map-underscore-to-camel-case: true
